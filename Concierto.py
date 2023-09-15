@@ -61,7 +61,7 @@ while op != 6:
 
             for grupo in bandas:
              if grupo["id"] == id_ba:
-               banda_eliminada = grupo["nombre"]  
+               banda_eliminada = grupo["nombre"]  #guardar la banda en la nueva variable
                bandas.remove(grupo) 
                break 
     
