@@ -28,7 +28,7 @@ while op != 6:
     elif op == 2:
         grupos_no_presentados = []  # Crear una lista para almacenar grupos no presentados
         for grupo in bandas:
-            if grupo["estado"] == "2":
+            if grupo["estado"] == "2":#validacion 
                 grupos_no_presentados.append(grupo)  # Agregar el grupo a la lista
         if grupos_no_presentados:
             print("Grupos que no se han presentado:")
@@ -43,7 +43,7 @@ while op != 6:
 
         for grupo in bandas:
             if grupo["id"] == id_ba :   
-                if grupo["estado"]=="2":
+                if grupo["estado"]=="2":#validar si el grupo se ha presentado o no para poder realizar el cambio
                     nhora=input("Ingrese la nueva hora de presentacion -> ")
                     grupo["hora"]=nhora
                     print("se ha actualizado la hora de presentacion :) ")
@@ -65,7 +65,7 @@ while op != 6:
                bandas.remove(grupo) 
                break 
     
-            if banda_eliminada is not None:
+            if banda_eliminada is not None:# instrucion  para validar si se ha elimando el grupo 
              print(f"Se ha eliminado la banda con ID {id_ba} y nombre {banda_eliminada}")
             else:
              print("No se ha encontrado una banda con el ID indicado ;)")
